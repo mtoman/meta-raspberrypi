@@ -40,6 +40,7 @@ printf "\n# ------ ci ------\n" >> conf/local.conf
 [ -z "$DL_DIR" ] || echo DL_DIR = \""$DL_DIR"\" >> conf/local.conf
 [ -z "$DISTRO" ] || echo DISTRO = \""$DISTRO"\" >> conf/local.conf
 cat <<EOCONF >>conf/local.conf
+CONNECTIVITY_CHECK_URIS = "https://www.yoctoproject.org/"
 BB_NUMBER_THREADS = "6"
 PARALLEL_MAKE = "-j 6"
 DISTRO_FEATURES:append = " systemd"
